@@ -1,8 +1,12 @@
-// @ts-nocheck
 import { Shape } from "./Shape";
 import { Point } from "./Point";
+import {Shapes} from "./interfaces";
 
-class TestShape extends Shape {}
+class TestShape extends Shape {
+  getType() {
+    return "test shape" as Shapes
+  }
+}
 
 describe("Shape", () => {
   const points = [new Point(0, 0), new Point(0, 3), new Point(4, 3)];
